@@ -3,6 +3,10 @@ Cpp Fast IO Templates by drway.
 
 The code is under MPL 2.0 Licence.
 
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
 This template is used for competitive programming, for a faster read in and print out speed.
 
 Need C++ 11 Support.
@@ -16,7 +20,11 @@ Need C++ 11 Support.
 
 **ATTENTION: You MUST use ```flush()``` after output!**
 
-# Functions need to be added
+## Differences between the lazy version and the full version
+
+The full version includes the comments that explains the code, the lazy version removed most of them.  It is better to use in contests.
+
+## Functions need to be added
 
 * read in a string
 * print a string
