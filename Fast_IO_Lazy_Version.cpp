@@ -9,6 +9,7 @@
 // This version of code deleted all the comments in the full code,
 // included bits/stdc++.h and uses namespace std for convenience
 // It is simpler to use it in Competitive Programming
+
 #include<bits/stdc++.h>
 using namespace std;
 
