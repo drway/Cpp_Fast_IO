@@ -26,9 +26,19 @@ template<typename T>inline void redi(T& ret) {
     while (ch>='0'&&ch<='9') ret=ret*10+ch-'0',ch=getchar();
     ret*=f;
 }
+inline void redi(string& ret) {
+    char ch=getchar();
+    ret.clear();
+    while(ch!=EOF&&ch!='\n'&&!isblank(ch))ret.push_back(ch),ch=getchar();
+}
 template <typename T,typename... Args> inline void redi(T& t, Args&... args)
 {
     redi(t);redi(args...);
+}
+inline void getline(string& ret) {
+    char ch=getchar();
+    ret.clear();
+    while(ch!=EOF&&ch!='\n')ret.push_back(ch),ch=getchar();
 }
 
 char out_buf[bufSIZE];
@@ -59,7 +69,15 @@ template<typename T>inline void wrtn(T x){
     putc(buf[len]),--len;
   }
 }
+inline void wrtn(const string &s){
+  for(auto ch:s)putc(ch);
+}
+inline void wrtn(const char s[]){
+  wrtn((string)s);
+}
+inline void wrtn(char s[]){
+  wrtn((string)s);
+}
 template<typename T>inline void wrti(T x){
 	wrtn(x),putc('\n');
 }
-

@@ -13,18 +13,13 @@ Need C++ 11 Support.
 
 ## Functions
 
-* ```redi()``` is used to read in integers. You can use it like ```redi(a,b,c,...)``` . It uses variadic templates so your compiler must support C++ 11 or later version of C++.
-* ```getchar()``` is a macro defined to get a character using the function ```fread()``` . (It is not the function defined in cstdio/stdio.h !)
-* ```wrtn()``` is used to write an integer. You can use it like ```wrtn(a)``` .
-* ```wrti()``` is used to write an integer and feed the line. You can use it like ```wrti(a)``` .
+* ```redi()``` is used to read in integers or strings. You can use it like ```redi(a,b,c,...)``` . It uses variadic templates so your compiler must support C++ 11 or later version of C++. **It only supports reading in ```std::string``` type of string.**
+* ```getchar()``` is a macro defined to get a character using the function ```fread()``` . (It is not the function defined in cstdio/stdio.h)
+* ```wrtn()``` is used to write an integer or a string. You can use it like ```wrtn(a)``` . It supports both ```std::string``` and C-Style String. **ATTENTION: Printing out a C-style String not terminated with a null char is an undefined behavior!**
+* ```wrti()``` is used to write an integer or a string and feed the line. You can use it like ```wrti(a)``` . It supports both ```std::string``` and C-Style String. **ATTENTION: Printing out a C-style String not terminated with a null char is an undefined behavior!**
 
 **ATTENTION: You MUST use ```flush()``` after output!**
 
 ## Differences between the lazy version and the full version
 
 The full version includes the comments that explains the code, the lazy version removed most of them.  It is better to use in contests.
-
-## Functions need to be added
-
-* read in a string
-* print a string

@@ -7,9 +7,11 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 // HEADERS SHOULD BE INCLUDED HERE
-//To run this code, you must include cstdio/stdio.h
+//To run this code, you must include cstdio/stdio.h, string, cctype/ctype.h
 
 #include<cstdio>
+#include<string>
+#include<cctype>
 
 // the size of the buffer, which is believed to be the fastest when the size is 2^15
 #define bufSIZE 1<<15
@@ -27,9 +29,19 @@ template<typename T>inline void redi(T& ret) {
     while (ch>='0'&&ch<='9') ret=ret*10+ch-'0',ch=getchar();
     ret*=f;
 }
+inline void redi(std::string& ret) {
+    char ch=getchar();
+    ret.clear();
+    while(ch!=EOF&&ch!='\n'&&!isblank(ch))ret.push_back(ch),ch=getchar();
+}
 template <typename T,typename... Args> inline void redi(T& t, Args&... args)
 {
     redi(t);redi(args...);
+}
+inline void getline(std::string& ret) {
+    char ch=getchar();
+    ret.clear();
+    while(ch!=EOF&&ch!='\n')ret.push_back(ch),ch=getchar();
 }
 
 // definations for printing out
@@ -62,10 +74,18 @@ template<typename T>inline void wrtn(T x){
     putc(buf[len]),--len;
   }
 }
+inline void wrtn(const std::string &s){
+  for(auto ch:s)putc(ch);
+}
+inline void wrtn(const char s[]){
+  wrtn((std::string)s);
+}
+inline void wrtn(char s[]){
+  wrtn((std::string)s);
+}
 template<typename T>inline void wrti(T x){
 	wrtn(x),putc('\n');
 }
 
 //start your program here
-
 
