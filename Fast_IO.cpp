@@ -2,14 +2,9 @@
 // Codes by drway
 // Copyright (C) drway
 
-// This library is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// Mozilla Public License 2.0 for more details.
-
-// You should have received a copy of the Mozilla Public License 2.0
-// along with this program;
-// If not, see <https://www.mozilla.org/en-US/MPL/>.
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
 
 // HEADERS SHOULD BE INCLUDED HERE
 //To run this code, you must include cstdio/stdio.h
@@ -22,7 +17,7 @@
 // definations for reading in
 #ifdef ONLINE_JUDGE
 #define getchar()(in_p1==in_p2&&(in_p2=(in_p1=in_buf)+std::fread(in_buf,1,bufSIZE,stdin),in_p1==in_p2)?EOF:*in_p1++)
-char in_buf[bufSIZE],*in_p1=buf,*in_p2=buf;
+char in_buf[bufSIZE],*in_p1=in_buf,*in_p2=in_buf;
 #endif
 
 // functions to read in
